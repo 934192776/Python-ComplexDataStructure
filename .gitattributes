@@ -1,2 +1,124 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+cities = ['Lisbon', 'Paris', 'New York']
+print(len(cities))
+cities[0] # Lisbon
+cities[1] # Paris
+cities[2] # New York
+
+# Nest lists
+cities = [
+  ['Lisbon', 'Porto'], 
+  ['Paris', 'Marseille', 'Lyon'], 
+  ['New York', 'Miami', ['San Francisco', 'Los Angeles']]
+]
+
+american_cities = cities[2]
+californian_cities = american_cities[2]
+print(californian_cities[0]) # San Franciso
+
+# Simple Dictionary
+cities = {
+  "Portugal": "Lisbon",
+  "France": "Paris",
+  "USA": "New York"
+}
+
+print(cities['USA']) # New York
+
+country = "Portugal"
+print(cities[country]) # Lisbon
+
+# List of dictionaries
+countries = [
+  {"country": "Portugal", "city": "Lisbon"},
+  {"country": "USA", "city": "Miami"},
+  {"country": "Japan", "city": "Tokyo"}
+]
+
+print(countries[1]['city']) # Miami
+
+for country in countries:
+  print(country['city']) # Lisbon, Miam, Tokyo
+  print(country['country']) # Portugal, USA, Japan
+
+# Dictionary of dictionaries
+cities = {
+  "Lisbon": { 'country': "Portual", 'population': 10000000 },
+  "Los Angeles": { 'country': "USA", 'population': 25000000 },
+  "Tokyo": { 'country': "Japan", 'population': 20000000 }
+}
+
+print(cities['Lisbon']['population']) # 10000000
+print(cities['Tokyo']['country']) # Japan
+
+# Dictionary Operations
+cities = {
+  "Portugal": "Lisbon",
+  "France": "Paris",
+  "USA": "New York"
+}
+
+# Updating a dictionary
+cities['France'] = "Lyon"
+print(cities['France']) # Lyon
+
+# Adding a new value to a dcitonary
+cities['Germany'] = 'Munich'
+print(cities['Germany']) # Munich
+
+# List operations
+cities = ['Lisbon', 'Paris', 'New York']
+
+# Updating a list
+cities[1] = "Lyon"
+print(cities[1]) # Lyon
+
+# # Adding a new value to a list
+cities.append('Munich')
+print(cities[3]) # Munich
+
+
+
+
+temperatures = [10,12,14,15]
+# print the list
+print(temperatures)
+
+# modify an existing temperature
+temperatures[1] = 16
+
+# print the modified item
+print(temperatures[1])
+
+# add a temperature to the list
+temperatures.append(19)
+
+# print the newly added item
+print(temperatures[4])
+
+forecast = [
+  "Monday": {"temperature":21, "condition": "rainy"},
+  "Tuesday": {"temperature":20, "condition": "sunny"},
+  "Wednesday": {"temperature":19, "condition": "cloudy"},
+  "Thursday": {"temperature":25, "condition": "windy"},
+  "Friday": {"temperature":23, "condition": "rainy"}
+]
+
+# print the dictionary
+print(forecast)
+
+# modify Wednesday temperature to 25 and Sunny
+forecast['Wednesday']['temperatures'] = 25
+forecast['Wednesday']['condition'] = "Cloudy"
+
+# print wednesdays temperature
+print(forecast['Wednesday']['temperature'])
+
+# add forecast for Friday, 27, Cloudy
+forecast['Friday'] = {"temperature":27, "condition":"Clooudy"}
+
+# print Friday temperature such as" Friday's temperature will be 27 degrees and cloudy"
+day ="Friday"
+temperature = forecast['Friday']['temperature']
+condition = forecast['Friday']['condition'].lower()
+
+print(f"Friday's temperature will be {forecast['Friday']['temperature']} degrees and {forecast['Friday']['condition'].lower()}")
